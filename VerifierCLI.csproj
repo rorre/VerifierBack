@@ -5,16 +5,13 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup 
-      Condition="'$(OS)' == 'Windows_NT' and
-                 '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and
-                 '$(SelfContained)' != 'true'"
-                  >
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT' and&#xD;&#xA;                 '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and&#xD;&#xA;                 '$(SelfContained)' != 'true'">
     <RunCommand Condition="'$(PlatformTarget)' == 'linux-x86'">$(MSBuildProgramFiles32)\dotnet\dotnet</RunCommand>
     <RunCommand Condition="'$(PlatformTarget)' == 'x64'">$(ProgramW6432)\dotnet\dotnet</RunCommand>
   </PropertyGroup>	
 
   <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
