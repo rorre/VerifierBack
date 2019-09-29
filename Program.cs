@@ -77,9 +77,7 @@ namespace VerifierCLI
                 mapIssues.Add(diffIssue);
             }
             if (OutputAsJSON) {
-                Console.Write("[" + JsonConvert.SerializeObject(mapIssues[0]));
-                foreach (JSONIssue json in mapIssues.Skip(1)) Console.Write($",{JsonConvert.SerializeObject(json)}");
-                Console.Write("]");
+                Console.Write(JsonConvert.SerializeObject(mapIssues));
             } else {
                 foreach (JSONIssue diff in mapIssues) {
                     Console.WriteLine(diff.difficulty);
