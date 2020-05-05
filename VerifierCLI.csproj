@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(OS)' == 'Windows_NT' and&#xD;&#xA;                 '$(TargetFrameworkIdentifier)' == '.NETCoreApp' and&#xD;&#xA;                 '$(SelfContained)' != 'true'">

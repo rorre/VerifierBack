@@ -15,11 +15,21 @@ namespace VerifierCLI.objects
     {
         public Issue.Level level {get; set;}
         public string message {get; set;}
-
     }
     class JSONIssue
     {
         public string difficulty {get; set;}
         public IList<CategoryIssue> problems {get; set;}
+    }
+    class Metadata
+    {
+        public string artist {get; set;}
+        public string title {get; set;}
+        public string mapper {get; set;}
+    }
+    class Result
+    {
+        public Metadata metadata {get; set;}
+        public List<JSONIssue> results {get; set;}
     }
 }
